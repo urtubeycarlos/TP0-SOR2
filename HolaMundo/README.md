@@ -1,7 +1,7 @@
 # TP0 - SOR2
 
 ## Introducción
-En este trabajo se crea un modulo básico.
+En este trabajo se crea un modulo básico de ejemplo.
 
 ## Pasos 
 * Ejecutar ```make clean & make``` para compilar el modulo
