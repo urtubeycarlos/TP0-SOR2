@@ -34,7 +34,7 @@ int init_module(void){
 
     printk(KERN_INFO "CharDevice: Driver %s registrado \n", DeviceName);
     printk(KERN_INFO "CharDevice: Se le a asigno el número %d.\n", Major);
-    printk(KERN_INFO "CharDevice: Para comunicarse con el driver, cree un archivo dev con: 'mknod /dev/%s c %d 0'.\n", DeviceName, Major);
+    printk(KERN_INFO "CharDevice: Para comunicarse con el driver, cree un archivo dev con: 'sudo mknod /dev/%s c %d 0'.\n", DeviceName, Major);
     return 0;
 }
 
@@ -82,7 +82,7 @@ static ssize_t device_read(struct file *filp, char *buffer, size_t length, loff_
 static ssize_t device_write(struct file *filp, const char *buff, size_t len, loff_t * off){
    
    int i;
-   int key = 4;
+   int key = 3;
    #ifdef DEBUG
         printk(KERN_INFO "device_write(%p,%s,%d)",filp,buff,len);
    #endif 
